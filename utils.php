@@ -20,7 +20,10 @@ $users = [
         "lastname" => strtoupper("guillon"),
         "firstname" => ucfirst("marjorie"),
         "games" => [
-            [$games[2], 1300],
+            [
+                $games[2],// indice 0 
+                1300 // indice 1
+            ],
             [$games[4], 26],
             [$games[7], 60],
             [$games[8], 235],

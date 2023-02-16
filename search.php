@@ -34,11 +34,24 @@ $search = trim(htmlspecialchars($_GET["search"]));
 </head>
 
 <body>
-    <div class="container">
+
+    <nav class="navbar navbar-expand-lg bg-dark"  data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-2" href="/liste_user.php">TP_1 Jeff Game</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form action="/search.php" method="get" class="d-flex me-2" role="search">
+                    <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid d-flex justify-content-between">
         <div class="col-6">
             <?php
             foreach ($users as $user) :
-                if (strtoupper($search) == $user["lastname"] || ucfirst($search) == $user["firstname"]) : ?>
+                if (strtoupper($search) === $user["lastname"] || ucfirst($search) === $user["firstname"]) : ?>
                     <div class="card my-5 shadow" style="width: 36rem;">
                         <div class="card-header  d-flex justify-content-center">
                             <?= $user['lastname']; ?> <?= $user['firstname']; ?>

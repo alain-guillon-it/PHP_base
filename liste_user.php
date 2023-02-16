@@ -28,14 +28,19 @@ require("./utils.php");
 </head>
 
 <body>
-    <div class="container-fluid">
-
-        <form action="/search.php" method="get" class="mt-5 mx-5">
-            <div class="col-8 mx-auto">
-                <input class="form-control my-3" type="text" name="search" placeholder="veuillez taper votre prénom">
-                <button type="submit" class="btn btn-primary">Rechercher</button>
+    <nav class="navbar navbar-expand-lg bg-dark"  data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-2" href="/liste_user.php">TP_1 Jeff Game</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form action="/search.php" method="get" class="d-flex me-2" role="search">
+                    <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="submit">Search</button>
+                </form>
             </div>
-        </form>
+        </div>
+    </nav>
+
+    <div  action="/search.php" method="get" class="container-fluid">
         <div class="col-10 mx-auto my-5">
             <table class="table table-striped table-hover border shadow text-center">
                 <thead>
